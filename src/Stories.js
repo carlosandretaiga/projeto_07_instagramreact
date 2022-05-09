@@ -13,7 +13,6 @@ function Story (props) {
 
 export default function Stories () {
 
-
     const items = [
         {
             image: "assets/img/9gag.svg",
@@ -55,7 +54,7 @@ export default function Stories () {
             image: "assets/img/memeriagourmet.svg", 
             name: "memeriagourmet"
         }
-    ]
+    ];
 
     return (
         <div class="stories">

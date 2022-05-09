@@ -14,19 +14,76 @@ function SidebarSuggestion (props) {
     )
 }
 
+function UserSuggestion (props) {
+    return (
+        <div class="usuario">
+            <img src={props.image} />
+            <div class="texto">
+              <strong>{props.nameProfile}</strong>
+              {props.name}
+            </div>
+        </div>
+
+    )
+}
+
+
 
 export default function Sidebar () { 
+
+
+    const items = [
+        {
+            image:"assets/img/bad.vibes.memes.svg",
+            name: "bad.vibes.memes",
+            reason: "Segue você"
+        },
+         
+        {
+            image: "assets/img/chibirdart.svg",
+            name: "chibirdart",
+            reason: "Segue você"
+        },
+
+        {
+            image: "assets/img/razoesparaacreditar.svg",
+            name: "razoesparaacreditar",
+            reason: "Novo no Instagram"
+
+        }, 
+
+        {
+            image: "assets/img/adorable_animals.svg",
+            name: "adorable_animals",
+            reason: "Segue você"
+        },
+
+        {
+            image: "assets/img/smallcutecats.svg",
+            name: "smallcutecats",
+            reason: "Segue você"
+        }
+    ];
+
+    const itemsUserSuggestions = [
+        {
+            image: "assets/img/catanacomics.svg",
+            nameProfile: "catanacomics",
+            name: "Iêda Catana" 
+        }
+    ]
+
 
     return (
 
         <div class="sidebar">
-          <div class="usuario">
-            <img src="assets/img/catanacomics.svg" />
-            <div class="texto">
-              <strong>catanacomics</strong>
-              Catana
-            </div>
-          </div>
+
+           {itemsUserSuggestions.map(item => 
+                    <UserSuggestion
+                    image={item.image}
+                    nameProfile={item.nameProfile} 
+                    name={item.name}        
+            />)}
 
           <div class="sugestoes">
             <div class="titulo">
@@ -34,38 +91,13 @@ export default function Sidebar () {
               <div>Ver tudo</div>
             </div>
 
-
-            <SidebarSuggestion
-            image = "assets/img/bad.vibes.memes.svg"
-            name = "bad.vibes.memes"
-            reason = "Segue você"
-             /> 
-
-           <SidebarSuggestion
-            image = "assets/img/chibirdart.svg"
-            name = "chibirdart"
-            reason = "Segue você"
-            /> 
-
-           <SidebarSuggestion
-            image = "assets/img/razoesparaacreditar.svg"
-            name = "razoesparaacreditar"
-            reason = "Novo no Instagram"
-            /> 
-
-
-            <SidebarSuggestion
-            image = "assets/img/adorable_animals.svg"
-            name = "adorable_animals"
-            reason = "Segue você"
-            /> 
-
-
-            <SidebarSuggestion
-            image = "assets/img/smallcutecats.svg"
-            name = "smallcutecats"
-            reason = "Segue você"
-            /> 
+            {items.map(item => 
+                    <SidebarSuggestion
+                    image={item.image}
+                    name={item.name} 
+                    reason={item.reason} 
+                    
+            />)}
 
           </div>
 
