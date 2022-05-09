@@ -1,13 +1,22 @@
 import Navbar from './Navbar'; 
-import Content from './Content';
-import Footer from './Footer';
+import Sidebar from './Sidebar';
+import MobileBackground from './MobileBackground';
+import Stories from './Stories';
+import Posts from './Posts';
 
 export default function App () {
     return (
         <div>
             <Navbar /> 
-            <Content /> 
-            <Footer /> 
+            <div class="corpo">
+                <div class="esquerda"> 
+                <Stories /> 
+                <Posts /> 
+                </div> 
+
+                <Sidebar />
+            </div>
+            <MobileBackground />
         </div>
     )
 }
