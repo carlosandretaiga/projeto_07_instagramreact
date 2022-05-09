@@ -1,3 +1,20 @@
+function SidebarSuggestion (props) {
+    return (
+        <div class="sugestao">
+              <div class="usuario">
+                <img src={props.image} />
+                <div class="texto">
+                  <div class="nome">{props.name}</div>
+                  <div class="razao">{props.reason}</div>
+                </div>
+              </div>
+
+              <div class="seguir">Seguir</div>
+        </div>
+    )
+}
+
+
 export default function Sidebar () { 
 
     return (
@@ -17,65 +34,39 @@ export default function Sidebar () {
               <div>Ver tudo</div>
             </div>
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/bad.vibes.memes.svg" />
-                <div class="texto">
-                  <div class="nome">bad.vibes.memes</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
 
-              <div class="seguir">Seguir</div>
-            </div>
+            <SidebarSuggestion
+            image = "assets/img/bad.vibes.memes.svg"
+            name = "bad.vibes.memes"
+            reason = "Segue você"
+             /> 
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/chibirdart.svg" />
-                <div class="texto">
-                  <div class="nome">chibirdart</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
+           <SidebarSuggestion
+            image = "assets/img/chibirdart.svg"
+            name = "chibirdart"
+            reason = "Segue você"
+            /> 
 
-              <div class="seguir">Seguir</div>
-            </div>
+           <SidebarSuggestion
+            image = "assets/img/razoesparaacreditar.svg"
+            name = "razoesparaacreditar"
+            reason = "Novo no Instagram"
+            /> 
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/razoesparaacreditar.svg" />
-                <div class="texto">
-                  <div class="nome">razoesparaacreditar</div>
-                  <div class="razao">Novo no Instagram</div>
-                </div>
-              </div>
 
-              <div class="seguir">Seguir</div>
-            </div>
+            <SidebarSuggestion
+            image = "assets/img/adorable_animals.svg"
+            name = "adorable_animals"
+            reason = "Segue você"
+            /> 
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/adorable_animals.svg" />
-                <div class="texto">
-                  <div class="nome">adorable_animals</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
 
-              <div class="seguir">Seguir</div>
-            </div>
+            <SidebarSuggestion
+            image = "assets/img/smallcutecats.svg"
+            name = "smallcutecats"
+            reason = "Segue você"
+            /> 
 
-            <div class="sugestao">
-              <div class="usuario">
-                <img src="assets/img/smallcutecats.svg" />
-                <div class="texto">
-                  <div class="nome">smallcutecats</div>
-                  <div class="razao">Segue você</div>
-                </div>
-              </div>
-
-              <div class="seguir">Seguir</div>
-            </div>
           </div>
 
           <div class="links">
